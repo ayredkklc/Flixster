@@ -69,6 +69,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let posterUrl = URL(string: baseUrl + posterPath)
         //cell.posterView.af_setImage(withURL: posterUrl!) but it changed it to below idk why
         cell.posterView.af.setImage(withURL: posterUrl!)
+        print("hi")
         return cell
     }
     
