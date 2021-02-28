@@ -16,7 +16,7 @@ class MovieGridViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet weak var collentionView: UICollectionView!
     var movies = [[String:Any]]()
 
-    @IBOutlet weak var posterView: UIImageView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,22 +70,35 @@ class MovieGridViewController: UIViewController, UICollectionViewDelegate, UICol
         let baseUrl = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
         let posterUrl = URL(string: baseUrl + posterPath)
-        //cell.posterView.af_setImage(withURL: posterUrl!) but it changed it to below idk why
-        cell.posterView.af_setImage(withURL: posterUrl!)
+    
+        
+        
+        cell.posterView.af.setImage(withURL: posterUrl!)
         
         
         return cell
     }
     
 
-    /*
+  
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collentionView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+      
+        //pass th eselected movie details to the details movie controller
+        let greidDetailsViewControllor = segue.destination as! MoviesGridDetailsViewController
+        greidDetailsViewControllor.movie = movie
+        
+        //toi deselct the aminated press in app
+        collentionView.deselectItem(at: indexPath, animated: true)
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

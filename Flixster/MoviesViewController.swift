@@ -11,12 +11,24 @@ import AlamofireImage
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
+   
     
     @IBOutlet weak var tableView: UITableView!
+    
     var movies = [[String:Any]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //
+        //tableView.
+        
+       /* posterView.layer.borderWidth = 1
+        posterView.layer.masksToBounds = false
+        posterView.layer.borderColor = UIColor.black.cgColor
+        posterView.layer.cornerRadius = posterView.frame.height/2
+        posterView.clipsToBounds = true
+        */
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -69,7 +81,21 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let posterUrl = URL(string: baseUrl + posterPath)
         //cell.posterView.af_setImage(withURL: posterUrl!) but it changed it to below idk why
         cell.posterView.af.setImage(withURL: posterUrl!)
-        print("hi")
+        
+        //cell.posterView = self
+        
+        cell.posterView.layer.cornerRadius = (cell.posterView.frame.width / 2)
+        //cell.posterView.layer.cornerRadius = radius
+        cell.posterView.layer.masksToBounds = true
+        cell.posterView.clipsToBounds = true
+        /*cell.posterView.layer.borderWidth = 1
+        cell.posterView.layer.masksToBounds = false
+        cell.posterView.layer.borderColor = UIColor.black.cgColor
+        cell.posterView.layer.cornerRadius = cell.posterView.frame.height/2
+        cell.posterView.clipsToBounds = true
+ */
+        
+        //print("hi")
         return cell
     }
     
