@@ -87,6 +87,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.posterView.layer.cornerRadius = (cell.posterView.frame.width / 2)
         //cell.posterView.layer.cornerRadius = radius
         cell.posterView.layer.masksToBounds = true
+    
         cell.posterView.clipsToBounds = true
         /*cell.posterView.layer.borderWidth = 1
         cell.posterView.layer.masksToBounds = false

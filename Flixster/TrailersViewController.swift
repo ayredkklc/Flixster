@@ -9,6 +9,8 @@ import UIKit
 
 class TrailersViewController: UIViewController {
 
+    
+    var movie: [String:Any]!
     override func viewDidLoad() {
         super.viewDidLoad()
 

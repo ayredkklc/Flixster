@@ -170,6 +170,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CeS-gh-4U2">
                                 <rect key="frame" x="79" y="88" width="245" height="286"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Sud-Fl-MQ5" appends="YES" id="B0E-qL-biY"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmR-CO-tTg">
                                 <rect key="frame" x="20" y="382" width="374" height="45"/>
@@ -194,13 +198,21 @@
                         <outlet property="posterView" destination="CeS-gh-4U2" id="nx8-9w-Jvd"/>
                         <outlet property="synopsisLabel" destination="LWL-CN-e9R" id="1Nj-fE-oTK"/>
                         <outlet property="titleLabel" destination="VmR-CO-tTg" id="giX-Nz-BrV"/>
+                        <outlet property="viewTap" destination="Sud-Fl-MQ5" id="xY5-p5-gke"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7t-qU-xw4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qkj-bz-UuA" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Sud-Fl-MQ5">
+                    <connections>
+                        <action selector="tapView:" destination="qkj-bz-UuA" id="EJk-2e-F3U"/>
+                        <segue destination="GMq-Ra-WUy" kind="show" id="4SE-VV-fgo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="560.86956521739137" y="1401.5625"/>
         </scene>
-        <!--Trailers View Controller-->
+        <!--Trailer-->
         <scene sceneID="8h4-W7-HWf">
             <objects>
                 <viewController id="GMq-Ra-WUy" customClass="TrailersViewController" customModule="Flixster" customModuleProvider="target" sceneMemberID="viewController">
@@ -210,6 +222,9 @@
                         <viewLayoutGuide key="safeArea" id="6XY-T6-tR0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Trailer" id="Bi1-Rk-BP5">
+                        <barButtonItem key="backBarButtonItem" title="Details" id="nPY-aP-DDL"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Btr-wK-oWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,6 +11,7 @@ class MoviesGridDetailsViewController: UIViewController {
 
     
    
+    @IBOutlet var viewTap: UITapGestureRecognizer!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var synopsisLabel: UILabel!
@@ -39,18 +40,39 @@ class MoviesGridDetailsViewController: UIViewController {
     
         posterView.af.setImage(withURL: posterUrl!)
         
+        //tap time
+        viewTap.numberOfTapsRequired = 1
+        viewTap.numberOfTouchesRequired = 1
+        viewTap.accessibilityRespondsToUserInteraction = true
+        
+        
+        
         
     }
+    func myviewTapped(_ sender: UITapGestureRecognizer) {
+        print("hello")
     
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let cell = sender as! UITapGestureRecognizer
+        let indexPath = posterView.index(ofAccessibilityElement: cell)
+        //let movies = movie[indexPath]
+      
+        //pass th eselected movie details to the details movie controller
+        let greidDetailsViewControllor = segue.destination as! TrailersViewController
+        greidDetailsViewControllor.movie = movie
+        
+        //toi deselct the aminated press in app
+        //collentionView.deselectItem(at: indexPath, animated: true)
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
