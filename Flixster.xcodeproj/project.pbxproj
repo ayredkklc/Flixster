@@ -20,6 +20,9 @@
 		CD712F3325E05BD6007EF239 /* FlixsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD712F3225E05BD6007EF239 /* FlixsterUITests.swift */; };
 		CD712F4725E05E04007EF239 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD712F4625E05E04007EF239 /* MoviesViewController.swift */; };
 		CD712F4C25E06C71007EF239 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD712F4B25E06C71007EF239 /* MovieCell.swift */; };
+		CD93C84825F4AB71008A6D9D /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD93C84725F4AB71008A6D9D /* video.mp4 */; };
+		CD93C84925F4AB71008A6D9D /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD93C84725F4AB71008A6D9D /* video.mp4 */; };
+		CD93C84A25F4AB71008A6D9D /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD93C84725F4AB71008A6D9D /* video.mp4 */; };
 		CDF3987425E89B9300BB075F /* MoviesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3987325E89B9300BB075F /* MoviesDetailsViewController.swift */; };
 		CDF3987925EA04AB00BB075F /* MovieGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3987825EA04AB00BB075F /* MovieGridViewController.swift */; };
 		CDF3987E25EA08BA00BB075F /* MovieGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3987D25EA08BA00BB075F /* MovieGridCell.swift */; };
@@ -66,6 +69,7 @@
 		CD712F3425E05BD6007EF239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD712F4625E05E04007EF239 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		CD712F4B25E06C71007EF239 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		CD93C84725F4AB71008A6D9D /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		CDF3987325E89B9300BB075F /* MoviesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailsViewController.swift; sourceTree = "<group>"; };
 		CDF3987825EA04AB00BB075F /* MovieGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridViewController.swift; sourceTree = "<group>"; };
 		CDF3987D25EA08BA00BB075F /* MovieGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridCell.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		CD712F0F25E05BD4007EF239 /* Flixster */ = {
 			isa = PBXGroup;
 			children = (
+				CD93C84725F4AB71008A6D9D /* video.mp4 */,
 				CD712F1025E05BD4007EF239 /* AppDelegate.swift */,
 				CD712F1225E05BD4007EF239 /* SceneDelegate.swift */,
 				CD712F1625E05BD4007EF239 /* Main.storyboard */,
@@ -296,6 +301,7 @@
 			files = (
 				CD712F1D25E05BD6007EF239 /* LaunchScreen.storyboard in Resources */,
 				CD712F1A25E05BD6007EF239 /* Assets.xcassets in Resources */,
+				CD93C84825F4AB71008A6D9D /* video.mp4 in Resources */,
 				CD712F1825E05BD4007EF239 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD93C84925F4AB71008A6D9D /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD93C84A25F4AB71008A6D9D /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

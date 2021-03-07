@@ -10,8 +10,11 @@ import UIKit
 class MoviesGridDetailsViewController: UIViewController {
 
     
-   
-    @IBOutlet var viewTap: UITapGestureRecognizer!
+    @IBAction func trailerButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToTrailer", sender: self)
+    }
+    
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var synopsisLabel: UILabel!
@@ -41,24 +44,20 @@ class MoviesGridDetailsViewController: UIViewController {
         posterView.af.setImage(withURL: posterUrl!)
         
         //tap time
-        viewTap.numberOfTapsRequired = 1
+       /* viewTap.numberOfTapsRequired = 1
         viewTap.numberOfTouchesRequired = 1
         viewTap.accessibilityRespondsToUserInteraction = true
-        
+        */
         
         
         
     }
-    func myviewTapped(_ sender: UITapGestureRecognizer) {
-        print("hello")
-    
-    }
-
+   
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let cell = sender as! UITapGestureRecognizer
         let indexPath = posterView.index(ofAccessibilityElement: cell)
@@ -73,6 +72,6 @@ class MoviesGridDetailsViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }

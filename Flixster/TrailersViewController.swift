@@ -7,15 +7,34 @@
 
 import UIKit
 
-class TrailersViewController: UIViewController {
+import AVKit
+import AVFoundation
 
+class TrailersViewController: UIViewController, AVPlayerViewControllerDelegate {
     
     var movie: [String:Any]!
+    
+    var player: AVPlayer!
+    var playerViewController: AVPlayerViewController!
+
+    /*
+     let player = AVPlayer(url: videoURL)
+     let vc = AVPlayerViewController()
+     vc.player = player
+
+     present(vc, animated: true) {
+         vc.player?.play()
+     }
+     */
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
     
 
     /*

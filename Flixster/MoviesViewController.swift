@@ -7,15 +7,65 @@
 
 import UIKit
 import AlamofireImage
+import AVKit
+import AVFoundation
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AVPlayerViewControllerDelegate {
+    var movies = [[String:Any]]()
     
-    
-   
+    var player: AVPlayer!
+    var playerViewController: AVPlayerViewController!
     
     @IBOutlet weak var tableView: UITableView!
     
-    var movies = [[String:Any]]()
+    @IBAction func trailerButton(_ sender: UIButton) {
+        playVideo()
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
+        //let movie = movies[tableView.indexPathForSelectedRow!.row]
+        
+        //let id = movie["id"] as! String
+        /*let url = "https://api.themoviedb.org/3/movie/"
+        let rest = "/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"
+        let total = (url + id + rest )*/
+        //let total = "https://www.youtube.com/watch?v=TcMBFSGVi1c"
+        //let videoUrl = URL(string: "https://youtu.be/TcMBFSGVi1c")
+        //let pat = Bundle.main.path(forResource: "video", ofType: "mp4")
+        //let video = Bundle.main.bundleURL(path: pat)
+        
+        
+        //let video = video.mp4
+        //let playe = AVPlayer(playerItem: video)
+        /*let player = AVPlayer(url: videoUrl!)
+        let vc = AVPlayerViewController()
+        vc.player = player
+        present(vc, animated: true) {
+            vc.player!.play()
+        }
+        
+         let player = AVPlayer(url: videoURL)
+         let vc = AVPlayerViewController()
+         vc.player = player
+
+         present(vc, animated: true) {
+             vc.player?.play()
+         }
+         */
+        
+        
+    }
+    private func playVideo() {
+            guard let path = Bundle.main.path(forResource: "video", ofType:"mp4") else {
+                debugPrint("video.mp4 not found")
+                return
+            }
+            let player = AVPlayer(url: URL(fileURLWithPath: path))
+            let playerController = AVPlayerViewController()
+            playerController.player = player
+            present(playerController, animated: true) {
+                player.play()
+            }
+        }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,11 +116,22 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
-        
+          
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
         let synopsis = movie["overview"] as! String
         
+        
+        //let video = movie["video"] since its boolean lets assume all of them have videos
+        //let id = movie["id"] as! Int
+        
+        
+        
+        
+        
+            
+            
+            
         //cell.textLabel!.text = title
         cell.titleLabel.text = title
         cell.synopsisLabel.text = synopsis

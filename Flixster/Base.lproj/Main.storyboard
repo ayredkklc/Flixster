@@ -73,6 +73,13 @@
                                                         <constraint firstAttribute="width" constant="137" id="ahr-2h-rwB"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pz9-5k-yhh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="137" height="156"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="trailerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNN-bV-i9A"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="tintColor" red="1" green="0.7694570028561345" blue="0.84938286162746901" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -171,9 +178,6 @@
                                 <rect key="frame" x="79" y="88" width="245" height="286"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Sud-Fl-MQ5" appends="YES" id="B0E-qL-biY"/>
-                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmR-CO-tTg">
                                 <rect key="frame" x="20" y="382" width="374" height="45"/>
@@ -189,6 +193,14 @@
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5D-3p-4mD">
+                                <rect key="frame" x="79" y="88" width="245" height="286"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="tapTrailer:" destination="qkj-bz-UuA" eventType="touchUpInside" id="k3w-dX-krn"/>
+                                    <action selector="trailerButton:" destination="F5y-ZS-dh9" eventType="touchUpInside" id="zby-Ny-gog"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zvg-HA-Pto"/>
                         <color key="backgroundColor" red="0.74124630656562862" green="0.57287093640124487" blue="0.76267218835575057" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
@@ -198,19 +210,13 @@
                         <outlet property="posterView" destination="CeS-gh-4U2" id="nx8-9w-Jvd"/>
                         <outlet property="synopsisLabel" destination="LWL-CN-e9R" id="1Nj-fE-oTK"/>
                         <outlet property="titleLabel" destination="VmR-CO-tTg" id="giX-Nz-BrV"/>
-                        <outlet property="viewTap" destination="Sud-Fl-MQ5" id="xY5-p5-gke"/>
+                        <segue destination="GMq-Ra-WUy" kind="show" identifier="goToTrailer" id="qlw-Qu-q0h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7t-qU-xw4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="qkj-bz-UuA" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="Sud-Fl-MQ5">
-                    <connections>
-                        <action selector="tapView:" destination="qkj-bz-UuA" id="EJk-2e-F3U"/>
-                        <segue destination="GMq-Ra-WUy" kind="show" id="4SE-VV-fgo"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="560.86956521739137" y="1401.5625"/>
+            <point key="canvasLocation" x="550.72463768115949" y="1433.7053571428571"/>
         </scene>
         <!--Trailer-->
         <scene sceneID="8h4-W7-HWf">
@@ -228,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Btr-wK-oWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1475" y="1402"/>
+            <point key="canvasLocation" x="1410" y="1434"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="0Fy-Iv-BVh">
