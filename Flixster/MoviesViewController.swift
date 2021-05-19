@@ -20,37 +20,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBAction func trailerButton(_ sender: UIButton) {
         playVideo()
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell
-        //let movie = movies[tableView.indexPathForSelectedRow!.row]
-        
-        //let id = movie["id"] as! String
-        /*let url = "https://api.themoviedb.org/3/movie/"
-        let rest = "/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let total = (url + id + rest )*/
-        //let total = "https://www.youtube.com/watch?v=TcMBFSGVi1c"
-        //let videoUrl = URL(string: "https://youtu.be/TcMBFSGVi1c")
-        //let pat = Bundle.main.path(forResource: "video", ofType: "mp4")
-        //let video = Bundle.main.bundleURL(path: pat)
-        
-        
-        //let video = video.mp4
-        //let playe = AVPlayer(playerItem: video)
-        /*let player = AVPlayer(url: videoUrl!)
-        let vc = AVPlayerViewController()
-        vc.player = player
-        present(vc, animated: true) {
-            vc.player!.play()
-        }
-        
-         let player = AVPlayer(url: videoURL)
-         let vc = AVPlayerViewController()
-         vc.player = player
-
-         present(vc, animated: true) {
-             vc.player?.play()
-         }
-         */
-        
+   
         
     }
     private func playVideo() {
@@ -70,15 +40,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //
-        //tableView.
-        
-       /* posterView.layer.borderWidth = 1
-        posterView.layer.masksToBounds = false
-        posterView.layer.borderColor = UIColor.black.cgColor
-        posterView.layer.cornerRadius = posterView.frame.height/2
-        posterView.clipsToBounds = true
-        */
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -103,7 +64,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
               // TODO: Get the array of movies
               // TODO: Store the movies in a property to use elsewhere
               // TODO: Reload your table view data
-            //print("hi")
+          
 
            }
         }
@@ -121,18 +82,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let title = movie["title"] as! String
         let synopsis = movie["overview"] as! String
         
-        
-        //let video = movie["video"] since its boolean lets assume all of them have videos
-        //let id = movie["id"] as! Int
-        
-        
-        
-        
-        
             
-            
-            
-        //cell.textLabel!.text = title
+       
         cell.titleLabel.text = title
         cell.synopsisLabel.text = synopsis
         // because of swift optional just like casting it is adding ? before .text
@@ -140,24 +91,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let baseUrl = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie["poster_path"] as! String
         let posterUrl = URL(string: baseUrl + posterPath)
-        //cell.posterView.af_setImage(withURL: posterUrl!) but it changed it to below idk why
         cell.posterView.af.setImage(withURL: posterUrl!)
         
-        //cell.posterView = self
+
         
         cell.posterView.layer.cornerRadius = (cell.posterView.frame.width / 2)
-        //cell.posterView.layer.cornerRadius = radius
         cell.posterView.layer.masksToBounds = true
     
         cell.posterView.clipsToBounds = true
-        /*cell.posterView.layer.borderWidth = 1
-        cell.posterView.layer.masksToBounds = false
-        cell.posterView.layer.borderColor = UIColor.black.cgColor
-        cell.posterView.layer.cornerRadius = cell.posterView.frame.height/2
-        cell.posterView.clipsToBounds = true
- */
-        
-        //print("hi")
+       
         return cell
     }
     
