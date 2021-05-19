@@ -12,18 +12,27 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 #### BONUS
 - [x] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
-- [ ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
+- [x] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
 ### App Walkthrough GIF
+After adding a video when clicked on the poster(just the video part):
 
-<img src="http://g.recordit.co/0gXwnD4187.gif" width=250><br>
+<img src="http://g.recordit.co/nFyTZPAZQW.gif" width=250><br>
 
 After adding bonus part 1:
 
 <img src="http://g.recordit.co/FlidXcbu5u.gif" width=250><br>
 
+Firts commit:
+
+<img src="http://g.recordit.co/0gXwnD4187.gif" width=250><br>
+
+
+
 ### Notes
-THe API website was noit responding to my reequest so I couldnt add the videos for the trailers.
+THe API website was not responding to my request so I couldn't add the videos for the trailers.
+Also the API website was giving the boolean false for the the videos of the movies so I couldnt get the trailers of the movies, but I added my own video.
+So when clicked onthe poster the video I put appears instead of the actual trailer of the movie.
 
 ---
 
