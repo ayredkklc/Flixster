@@ -25,12 +25,7 @@ class MoviesGridDetailsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        /*
-         
-         
-         titleLabel.text = movie["title"] as! String
-         titleLabel.sizeToFit()
-         */
+    
         titleLabel.text = movie["title"] as? String
         titleLabel.sizeToFit()
         
@@ -42,13 +37,6 @@ class MoviesGridDetailsViewController: UIViewController {
         let posterUrl = URL(string: baseUrl + posterPath)
     
         posterView.af.setImage(withURL: posterUrl!)
-        
-        //tap time
-       /* viewTap.numberOfTapsRequired = 1
-        viewTap.numberOfTouchesRequired = 1
-        viewTap.accessibilityRespondsToUserInteraction = true
-        */
-        
         
         
     }

@@ -47,13 +47,11 @@ class MovieGridViewController: UIViewController, UICollectionViewDelegate, UICol
             //movies = dataDictionary["results"] as! [[String:Any]] to the next line is how xcode fixes it
             self.movies = dataDictionary["results"] as! [[String:Any]]
             self.collentionView.reloadData()
-            //self.tableView.reloadData()
             
               // TODO: Get the array of movies
               // TODO: Store the movies in a property to use elsewhere
               // TODO: Reload your table view data
-            //print("hi")
-
+    
            }
         }
         task.resume()
